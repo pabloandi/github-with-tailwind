@@ -339,8 +339,8 @@
 
         <div class="readme-container rounded-md border border-gray-400 px-4 mt-4">
           <h4 class="font-semibold">README.md</h4>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita inventore similique? Sed labore voluptate possimus voluptatibus repellat blanditiis veniam? Sapiente minus quas corrupti perspiciatis animi dolores repellat, non quaerat facere fuga accusantium? Consequuntur nulla repellendus veniam tempore, placeat explicabo autem fugiat quaerat nobis odio assumenda accusantium eaque nihil reiciendis culpa, laborum et. Unde, blanditiis nobis, corporis sed porro dolore cumque rem quod corrupti commodi vel omnis aliquid, aperiam labore veritatis ipsum. Ipsam alias quidem veritatis dignissimos deserunt laborum, ab sunt architecto maxime vitae sapiente excepturi saepe ipsa debitis similique totam animi sequi reiciendis repellat distinctio quasi. Deleniti animi mollitia distinctio fugit, ipsa neque maxime ullam eum debitis! Cum eum architecto fugiat! Quae doloremque consequatur optio ut, tenetur eius odio, sint libero laborum harum perspiciatis facere alias nemo illo praesentium, aliquid magni cupiditate voluptatum autem nostrum natus ipsa? Aperiam minima sint explicabo enim veniam, placeat porro ipsam quasi, atque, quas quisquam cupiditate quae nihil iure iusto beatae voluptatibus dolores doloremque error earum cum alias sit esse. Corrupti distinctio ducimus quis nobis hic magnam atque minima dicta! Temporibus molestiae officiis modi dolorum aliquam numquam, nisi enim, inventore voluptatibus alias tempore deleniti quibusdam voluptate reiciendis sed facere eligendi reprehenderit incidunt adipisci et?
+          <div v-html="readme" class="prose prose-blue px-4">
+
           </div>
         </div>
         <!-- end readme-container -->
@@ -501,9 +501,16 @@
   </footer>
   </div>
 </template>
-<script>
-export default {
 
+<script>
+import readme from './readme-tailwindcss.md'
+
+export default {
+  computed: {
+    readme(){
+      return readme
+    }
+  }
 }
 </script>
 <style lang="">
